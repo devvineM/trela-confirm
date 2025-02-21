@@ -27,11 +27,8 @@ async function testeConfirm() {
     "Remover produto", 
     "Esta ação não poderá ser desfeita. Deseja continuar?"
   );
-  if (res) {
-    console.log("Produto removido");
-  } else {
-    console.log("Ação cancelada");
-  }
+
+  // o retorno sera true para e false para não
 }
 ```
 
