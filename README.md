@@ -26,9 +26,7 @@ async function testeConfirm() {
   const res = await Trela.confirm(
     "Remover produto", 
     "Esta ação não poderá ser desfeita. Deseja continuar?"
-  );
-
-  // o retorno sera true para e false para não
+  ); //o retorno será true para sim e false para não
 }
 ```
 
