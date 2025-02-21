@@ -9,7 +9,8 @@ Basta adicionar o arquivo `trela.js` ao seu projeto e já está pronto para uso!
 
 
 ```html
-<script src="trela.js"></script>
+<link rel="stylesheet" href="https://devvinem.github.io/trela-confirm/trela.css">
+<script src="https://devvinem.github.io/trela-confirm/trela.js" defer></script>
 ```
 
 
