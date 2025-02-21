@@ -36,14 +36,6 @@ Simples assim: você só precisa envolver a chamada do Trela dentro de uma funç
 
 
 
-✨ Recursos
-Personalizado: Todo o design é facilmente customizável via CSS.
-Sem necessidade de instância: Apenas chame Trela.confirm() e pronto.
-Compatível com promessas: O Trela usa async/await, tornando sua integração super fluida com fluxos assíncronos.
-📋 Observação
-Lembre-se de que Trela.confirm() deve ser usado dentro de uma async function, pois ele depende de uma resposta assíncrona do usuário.
-
-
-
 📄 Licença
+
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
