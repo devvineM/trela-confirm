@@ -8,6 +8,7 @@ Basta adicionar o arquivo `trela.js` ao seu projeto e já está pronto para uso!
 
 ```html
 <script src="trela.js"></script>
+```
 
 ⚡ Como Usar
 O Trela é perfeito para quando você precisa de um diálogo de confirmação rápido e prático. Ele funciona de forma assíncrona e retorna true ou false com base na escolha do usuário. Ideal para fluxos que exigem a confirmação antes de prosseguir.
