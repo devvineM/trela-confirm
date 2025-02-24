@@ -19,10 +19,10 @@ class Trela {
     }
 
     static hide() {
-        this.__elementsValueClear__();
         this.__setEffectInWindow__(100, 0);
         let delay = setTimeout(() => {
             this.elTrela.style.display = "none";
+            this.__elementsValueClear__();
             clearTimeout(delay);
         }, 800);
     }
@@ -32,8 +32,8 @@ class Trela {
             return;
         }
 
-        if (!title || !description) {
-            console.log("Você precisa passar o título e a descrição para o Trela.");
+        if (!title) {
+            console.log("Você precisa passar o título");
             return;
         }
 
@@ -107,3 +107,5 @@ class Trela {
 }
 
 Trela.main();
+
+Trela.confirm('kkk', 'sss')

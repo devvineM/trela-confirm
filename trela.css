@@ -1,7 +1,20 @@
-:root {
+body[data-trela-theme="light"] {
     --bg-trela: 0, 0, 0;
     --bg-window-trela: 255, 255, 255;
     --text-trela: #000;
+    --text-light-trela: #fff;
+    --warning-trela: #ffc107;
+    --warning-hover-trela: #e0a800;
+    --danger-trela: #dc3545;
+    --danger-hover-trela: #bd2130;
+    --success-trela: #28a745;
+    --success-hover-trela: #218838;
+}
+
+body[data-trela-theme="dark"] {
+    --bg-trela: 0, 0, 0;
+    --bg-window-trela: 30, 32, 44;
+    --text-trela: #B8B8CA;
     --text-light-trela: #fff;
     --warning-trela: #ffc107;
     --warning-hover-trela: #e0a800;
@@ -20,6 +33,7 @@
 
 #root-trela {
     position: fixed;
+    inset: 1;
     width: 100%;
     height: 100%;
     display: none;
@@ -68,6 +82,7 @@
 
 #root-trela .title-trela {
     font-size: 1rem;
+    font-weight: bold;
     color: var(--text-trela);
     text-align: center;
     margin-bottom: 1rem;
