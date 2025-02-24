@@ -33,6 +33,8 @@ async function testeConfirm() {
 
 Simples assim: você só precisa envolver a chamada do Trela dentro de uma função async e aguardar o retorno da escolha do usuário (true para continuar ou false para cancelar).
 
+Ops! O segundo Parâmetro não é obrigatório
+
 
 
 📄 Licença
