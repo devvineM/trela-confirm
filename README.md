@@ -4,11 +4,9 @@
 
 ## 🛠️ Instalação
 
-Basta adicionar o arquivo `trela.js` ao seu projeto e já está pronto para uso!
-
-
 
 ```html
+<body data-trela-theme="light ou dark">
 <link rel="stylesheet" href="https://devvinem.github.io/trela-confirm/trela.css">
 <script src="https://devvinem.github.io/trela-confirm/trela.js" defer></script>
 ```
