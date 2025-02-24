@@ -1,4 +1,4 @@
-body[data-trela-theme="light"] {
+body[data-trela-theme="light"], body:not([data-trela-theme]) {
     --bg-trela: 0, 0, 0;
     --bg-window-trela: 255, 255, 255;
     --text-trela: #000;
