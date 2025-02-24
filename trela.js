@@ -107,5 +107,3 @@ class Trela {
 }
 
 Trela.main();
-
-Trela.confirm('kkk', 'sss')
