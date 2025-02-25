@@ -34,7 +34,7 @@ body[data-trela-theme="dark"] {
 #root-trela {
     position: fixed;
     inset: 1;
-    width: 100%;
+    width: 100vh;
     height: 100%;
     display: none;
     flex-direction: column;
@@ -43,6 +43,7 @@ body[data-trela-theme="dark"] {
     background-color: rgba(var(--bg-trela), .60);
     padding: 1rem;
     overflow: hidden;
+    z-index: 999;
 }
 
 #root-trela .window-trela {
