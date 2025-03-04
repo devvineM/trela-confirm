@@ -20,11 +20,7 @@ class Alert {
         <div class="window-trela">
           <div class="header-trela">
             <h2 id="title-alert-trela">Aviso</h2>
-            <button id="btn-cancel-alert-trela">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-              </svg>
-            </button>
+            <button id="btn-cancel-alert-trela"></button>
           </div>
           <div class="body-trela">
             <p id="message-alert-trela"></p>

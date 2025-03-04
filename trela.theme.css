@@ -81,7 +81,7 @@ body[data-trela-theme="dark"] {
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 40px;
+  grid-template-columns: 1fr 23px;
   border-bottom: 1px solid var(--border-color-trela) !important;
   padding-bottom: .5rem !important;
 }
@@ -92,17 +92,30 @@ body[data-trela-theme="dark"] {
 }
 
 .header-trela button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 23px;
+  height: 23px;
+  border-radius: 23px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: var(--danger-trela);
 }
 
-.header-trela button svg{
-  width: 28px;
-  height: 28px;
-  fill: var(--danger-trela);
+.header-trela button::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 15px;
+  background-color: rgba(255,255,255, .40);
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.header-trela button:hover::after{
+  opacity: 1;
 }
 
 .body-trela{
