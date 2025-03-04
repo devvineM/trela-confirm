@@ -1,0 +1,206 @@
+/*
+  Global
+*/
+
+body[data-trela-theme="light"], body:not([data-trela-theme]) {
+  --bg-trela: 0, 0, 0;
+  --bg-secondary-trela: transparent ;
+  --bg-window-trela: 255, 255, 255;
+  --primary-trela: #0085FF;
+  --text-trela: #495057;
+  --text-light-trela: #fff;
+  --warning-trela: #ffc107;
+  --warning-hover-trela: #e0a800;
+  --danger-trela: #dc3545;
+  --danger-hover-trela: #bd2130;
+  --success-trela: #28a745;
+  --success-hover-trela: #218838;
+  --border-color-trela: #ced4da;
+}
+
+body[data-trela-theme="dark"] {
+  --bg-trela: 0, 0, 0;
+  --bg-secondary-trela: transparent;
+  --bg-window-trela: 30, 32, 44;
+  --primary-trela: #0085FF;
+  --text-trela: #B8B8CA;
+  --text-light-trela: #fff;
+  --warning-trela: #ffc107;
+  --warning-hover-trela: #e0a800;
+  --danger-trela: #dc3545;
+  --danger-hover-trela: #bd2130;
+  --success-trela: #28a745;
+  --success-hover-trela: #218838;
+  --border-color-trela: #31323C;
+}
+
+.trela * {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+#prompt-trela, #alert-trela, #confirm-trela {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--bg-trela), .40);
+  padding: 1rem;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.window-trela {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid var(--border-color-trela);
+  border-radius: 1rem;
+  box-shadow: 2px 3px .8rem rgba(0, 0, 0, .10);
+  background-color: rgb(var(--bg-window-trela));
+  padding: 1rem !important;
+}
+
+.active-trela{
+  display: flex !important;
+}
+
+.header-trela{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 40px;
+  border-bottom: 1px solid var(--border-color-trela) !important;
+  padding-bottom: .5rem !important;
+}
+
+.header-trela h2{
+  font-size: 1rem;
+  color: var(--text-trela);
+}
+
+.header-trela button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.header-trela button svg{
+  width: 28px;
+  height: 28px;
+  fill: var(--danger-trela);
+}
+
+.body-trela{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 1rem;
+  background-color: var(--bg-secondary-trela);
+  padding: 1rem !important;
+  margin-top: 1rem !important;
+}
+
+.body-trela p{
+  width: 100%;
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-trela);
+}
+
+.footer-trela{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 1rem !important;
+}
+
+.btn-trela {
+  position: relative;
+  width: 100px;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 100px;
+  background-color: transparent;
+  margin: .3rem;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.btn-trela.btn-ok-trela {
+  background-color: var(--primary-trela);
+  color: var(--text-light-trela);
+}
+
+.btn-trela.btn-ok-trela:hover {
+  background-color: var(--success-hover-trela) !important;
+}
+
+.btn-trela.btn-no-trela {
+  background-color: var(--danger-trela);
+  color: var(--text-light-trela);
+}
+
+.btn-trela.btn-no-trela:hover {
+  background-color: var(--danger-hover-trela);
+}
+
+
+
+/*
+  Prompt
+*/
+
+#prompt-trela input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-trela);
+  background-color: rgba(var(--bg-window-trela));
+  border: 1px solid var(--border-color-trela);
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#prompt-trela input:focus {
+  border-color: var(--text-trela);
+}
+
+
+
+/*
+
+  Confirm
+
+*/
+#btn-reject-confirm-trela{
+  margin-right: .5rem;
+  color: var(--text-trela);
+  background-color: transparent;
+}
+#btn-reject-confirm-trela:hover{
+  background-color: var(--danger-trela);
+  color: var(--text-light-trela);
+}
