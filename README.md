@@ -1,48 +1,94 @@
 # Trela
 
-**Trela** é um **Confirm** personalizado construído com **JavaScript, HTML e CSS**, projetado para ser simples, elegante e extremamente fácil de usar em suas aplicações. Sem a necessidade de instâncias ou configurações complexas, basta chamá-lo diretamente em qualquer lugar do seu código.
+**Trela** é uma solução personalizada de Confirm, Prompt e Alert construída com JavaScript, HTML e CSS, projetada para ser simples, elegante e fácil de usar em suas aplicações. Sem necessidade de instâncias ou configurações complexas — basta chamá-lo diretamente em qualquer lugar do seu código.
+
 
 ## 🛠️ Instalação
+
+Adicione o código abaixo à sua página para integrar o Trela:
 
 
 ```html
 <body data-trela-theme="light ou dark">
 <link rel="stylesheet" href="https://devvinem.github.io/trela-confirm/trela.theme.css">
 
-< !-- Confirm -- > 
+<!-- Confirm (opcional) -->
 <script src="https://devvinem.github.io/trela-confirm/trela.confirm.js" defer></script>
 
-< !-- Alert -- > 
+<!-- Alert (opcional) -->
 <script src="https://devvinem.github.io/trela-confirm/trela.alert.js" defer></script>
 
-< !-- Prompt -- > 
+<!-- Prompt (opcional) -->
 <script src="https://devvinem.github.io/trela-confirm/trela.prompt.js" defer></script>
 ```
 
+O css é obrigátorio mas o restante fique avontade para usar so ó que precisa
 
 
 ⚡ Como Usar
-O Trela é perfeito para quando você precisa de um diálogo de confirmação rápido e prático. Ele funciona de forma assíncrona e retorna true ou false com base na escolha do usuário. Ideal para fluxos que exigem a confirmação antes de prosseguir.
 
-Exemplo de uso:
+## Confirm
 
+O Trela Confirm é ideal para diálogos de confirmação. Ele funciona de forma assíncrona e retorna true ou false com base na escolha do usuário.
 
+##### Exemplo de uso:
 
 ```javascript
+/*
+  @param {string} - titulo da caixa
+  @param {string} - descrição da ação
+  @return {boolean} - true ou false
+*/
+
 async function testeConfirm() {
-  const res = await Trela.confirm(
+
+  const res = await Confirm.add(
     "Remover produto", 
     "Esta ação não poderá ser desfeita. Deseja continuar?"
   ); //o retorno será true para sim e false para não
+
 }
 ```
 
 
 
-Simples assim: você só precisa envolver a chamada do Trela dentro de uma função async e aguardar o retorno da escolha do usuário (true para continuar ou false para cancelar).
+## Alert
 
-Ops! O segundo Parâmetro não é obrigatório
+Para exibir uma mensagem simples ao usuário, use o Trela Alert:
 
+```javascript
+/*
+  @param {string} - descrição
+  @return {boolean} - true - em caso que queira aguardar
+*/
+
+async function testeAlert() {
+
+  // se precisar aguarda o clique do usuário para continuar
+  const res = await Alert.add("Operação realizada com sucesso!");
+
+  // se caso não precisar esperar
+  Alert.add("Operação realizada com sucesso!");
+
+}
+```
+
+
+## Prompt
+O Trela Prompt permite capturar a entrada de dados do usuário, semelhante ao prompt nativo:
+
+```javascript
+/*
+  @param {string} -  titulo da caixa
+  @return {string,null} - valor digitado ou null em caso de nada
+*/
+
+async function testePrompt() {
+
+  const userInput = await Prompt.add("Qual é o seu nome?");
+
+}
+```
 
 
 📄 Licença
